@@ -122,7 +122,7 @@ export function isColdAndHot(temp1, temp2) {
  * makeABBA("a", "b"); // "abba"
  */
 export function makeABBA(A, B) {
-  /* TODO */
+  return "${A}${B}${B}${A}"
 }
 
 /**
@@ -143,7 +143,9 @@ export function makeABBA(A, B) {
  * makeSLS("a", "abc"); // "aabca"
  */
 export function makeSLS(str1, str2) {
-  /* TODO */
+  if (str1.length > str2.length) {
+    return "${str2}${str1}${str2}"
+  } else return "${str1}${str2}${str1}"
 }
 
 /**
