@@ -28,7 +28,9 @@ export function sumDouble(num1, num2) {
  * makes10(4, 4); // false
  */
 export function makes10(num1, num2) {
-  /* TODO */
+  if ((num1 === 10 || num2 === 10) || (num1 + num2 === 10)) {
+    return true;
+  } else return false;
 }
 
 /**
@@ -46,7 +48,9 @@ export function makes10(num1, num2) {
  * near100(105, 10); // true
  */
 export function near100(n, distance) {
-  /* TODO */
+  if (n >= 100 - distance && n <= 100 + distance) {
+    return true;
+  } else return false;
 }
 
 /**
@@ -63,7 +67,9 @@ export function near100(n, distance) {
  * isMultiple35(7); // false
  */
 export function isMultiple35(n) {
-  /* TODO */
+  if (n % 3 === 0 || n % 5 === 0) {
+    return true;
+  } else return false;
 }
 
 /**
@@ -98,7 +104,9 @@ export function shareLastDigit(num1, num2) {
  * isColdAndHot(10, 50); // false
  */
 export function isColdAndHot(temp1, temp2) {
-  /* TODO */
+  if ((temp1 > 100 && temp2 < 0) || (temp1 < 0 && temp2 > 100)) {
+    return true;
+  } else return false;
 }
 
 /**
@@ -156,7 +164,11 @@ export function makeSLS(str1, str2) {
  * canEnterClub(5, 5); // 1
  */
 export function canEnterClub(you, date) {
-  /* TODO */
+  if (you <= 2 || date <= 2) {
+    return 0; 
+  } else if  (you >= 8 || date >= 8) {
+    return 2;
+  } else return 1;
 }
 
 /**
@@ -177,5 +189,9 @@ export function canEnterClub(you, date) {
  * shouldAnswerPhone(true, true, false); // true
  */
 export function shouldAnswerPhone(isMorning, isBoss, isAsleep) {
-  /* TODO */
+  if isAsleep === true {
+    return false;
+  } else if (isMorning === true && isBoss === false) {
+    return false;
+  } else return true;
 }
